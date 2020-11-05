@@ -14,5 +14,15 @@ pipeline{
                 }
             }
         }
+        stage('build & start application'){
+            steps{
+                sh label: 'docker-compose', script: 'docker-compose up -d --build --force-recreate'
+            }
+            post {
+                always {
+                    sh label: 'docker-compose', script: 'docker-compose down'
+                }
+            }
+        }
     }
 }
