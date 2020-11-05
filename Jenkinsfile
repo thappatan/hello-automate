@@ -24,6 +24,7 @@ pipeline{
                 sh label: 'docker-compose', script: '''cd test/api
                 source env/bin/activate
                 pip install -r requirements.txt
+                sleep 3
                 robot greeting.robot
                 deactivate'''
             }

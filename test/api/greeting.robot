@@ -7,4 +7,4 @@ Hello World
     ${resp}=   Get Request    greeting    /hello
     Request Should Be Successful    ${resp}
     ${message}=    Convert To String   ${resp.content}
-    Should Contain    ${message}    hello, World
+    Should Contain    ${message}    Hello, World
