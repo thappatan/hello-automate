@@ -29,6 +29,7 @@ pipeline{
             }
             post {
                 always {
+                    robot outputPath: 'test/api', passThreshold: 100.0
                     sh label: 'docker-compose', script: 'docker-compose down'
                 }
             }
