@@ -11,7 +11,7 @@ services:
       PORT: 8000
       TIME_SERVER: time-api
     ports:
-      - '8080:8080'
+      - '8000:8000'
 
   time-api:
     image: time-api:0.0.2
