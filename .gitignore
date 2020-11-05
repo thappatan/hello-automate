@@ -3,3 +3,5 @@ jenkins.war
 
 jenkinshome/
 test/api/env
+test/api/*.html
+test/api/*.xml
